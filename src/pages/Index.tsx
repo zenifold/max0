@@ -1,10 +1,11 @@
 import { Github, Linkedin, Twitter, Mail, Phone, ExternalLink, Download, Briefcase, GraduationCap, Newspaper, Code, Award, BookOpen, FileCode, Database, Book, Terminal, BadgeCheck, ArrowRight, Medal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 const Index = () => {
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 animate-fade-in dark:bg-[#1A1F2C] dark:text-white">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 animate-fade-in dark:bg-[#1A1F2C] dark:text-white space-y-16">
       {/* Hero Section */}
       <section className="text-center space-y-4">
         <div className="inline-block px-4 py-1 bg-accent dark:bg-accent/10 rounded-full text-sm font-mono mb-4 animate-fade-up">
@@ -17,69 +18,126 @@ const Index = () => {
           Experienced DevOps Engineer specializing in automation, cloud infrastructure, and system optimization
         </p>
         <div className="flex flex-wrap justify-center gap-4 pt-4">
-          <Button variant="outline" className="social-link hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800" asChild>
-            <a href="mailto:kaleem@my.swjtu.edu.cn">
-              <Mail size={20} />
-              Email
+          <Button 
+            variant="outline" 
+            className="social-link group hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800 hover:shadow-lg" 
+            asChild
+          >
+            <a href="mailto:kaleem@my.swjtu.edu.cn" className="group">
+              <Mail size={20} className="group-hover:rotate-12 transition-transform" />
+              <span className="group-hover:translate-x-1 transition-transform">Email</span>
             </a>
           </Button>
-          <Button variant="outline" className="social-link hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800" asChild>
-            <a href="tel:+86-13111895637">
-              <Phone size={20} />
-              Call
+          <Button variant="outline" className="social-link group hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800 hover:shadow-lg" asChild>
+            <a href="tel:+86-13111895637" className="group">
+              <Phone size={20} className="group-hover:rotate-12 transition-transform" />
+              <span className="group-hover:translate-x-1 transition-transform">Call</span>
             </a>
           </Button>
-          <Button variant="outline" className="social-link hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800" asChild>
-            <a href="https://github.com/USER" target="_blank" rel="noopener noreferrer">
-              <Github size={20} />
-              GitHub
+          <Button variant="outline" className="social-link group hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800 hover:shadow-lg" asChild>
+            <a href="https://github.com/USER" target="_blank" rel="noopener noreferrer" className="group">
+              <Github size={20} className="group-hover:rotate-12 transition-transform" />
+              <span className="group-hover:translate-x-1 transition-transform">GitHub</span>
             </a>
           </Button>
-          <Button variant="outline" className="social-link hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800" asChild>
-            <a href="https://linkedin.com/in/USER" target="_blank" rel="noopener noreferrer">
-              <Linkedin size={20} />
-              LinkedIn
+          <Button variant="outline" className="social-link group hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800 hover:shadow-lg" asChild>
+            <a href="https://linkedin.com/in/USER" target="_blank" rel="noopener noreferrer" className="group">
+              <Linkedin size={20} className="group-hover:rotate-12 transition-transform" />
+              <span className="group-hover:translate-x-1 transition-transform">LinkedIn</span>
             </a>
           </Button>
-          <Button variant="outline" className="social-link hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800" asChild>
-            <a href="https://upwork.com/kaleem" target="_blank" rel="noopener noreferrer">
-              <ExternalLink size={20} />
-              Upwork
+          <Button variant="outline" className="social-link group hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800 hover:shadow-lg" asChild>
+            <a href="https://upwork.com/kaleem" target="_blank" rel="noopener noreferrer" className="group">
+              <ExternalLink size={20} className="group-hover:rotate-12 transition-transform" />
+              <span className="group-hover:translate-x-1 transition-transform">Upwork</span>
             </a>
           </Button>
         </div>
       </section>
 
-      {/* Experience Section */}
+      {/* Experience Section with Two Columns */}
       <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
         <h2 className="section-title flex items-center gap-2 dark:text-white">
           <Briefcase className="size-6" />
           Experience
         </h2>
         <div className="space-y-8">
-          <div className="space-y-4">
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="font-semibold text-lg font-mono">Senior DevOps Engineer</h3>
-                <p className="text-muted-foreground dark:text-gray-400">Consulting Corp</p>
+          {[
+            {
+              role: "Senior DevOps Engineer",
+              company: "Consulting Corp",
+              period: "Jul 2015 - Jun 2025",
+              clients: [
+                {
+                  name: "Notable Placement",
+                  achievements: [
+                    "Implemented cloud migration strategies and optimized performance",
+                    "Automated routine tasks and improved system security",
+                    "Collaborated with teams to streamline IT processes"
+                  ],
+                  technologies: "AWS, Terraform, Docker, Kubernetes",
+                  impact: "Reduced deployment time by 60% and improved system reliability by 40%"
+                },
+                {
+                  name: "Challenges Unlimited",
+                  achievements: [
+                    "Led a team to enhance system monitoring and alerting",
+                    "Developed CI/CD pipelines to improve deployment frequency"
+                  ],
+                  technologies: "Jenkins, GitLab CI, Prometheus",
+                  impact: "Increased deployment frequency by 50% and reduced downtime"
+                },
+                {
+                  name: "Broken Galleries",
+                  achievements: [
+                    "Revamped the infrastructure for better scalability",
+                    "Implemented security best practices across the board"
+                  ],
+                  technologies: "AWS, Terraform, Ansible",
+                  impact: "Improved system scalability and security posture"
+                }
+              ]
+            }
+          ].map((exp) => (
+            <div key={exp.role} className="space-y-4">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-semibold text-lg font-mono">{exp.role}</h3>
+                  <p className="text-muted-foreground dark:text-gray-400">{exp.company}</p>
+                </div>
+                <span className="text-sm text-muted-foreground dark:text-gray-400">{exp.period}</span>
               </div>
-              <span className="text-sm text-muted-foreground dark:text-gray-400">Jul 2015 - Jun 2025</span>
+              <div className="space-y-4">
+                {exp.clients.map((client) => (
+                  <Card 
+                    key={client.name} 
+                    className="hover:scale-[1.02] transition-all duration-300 dark:bg-gray-800/50 dark:border-gray-700 group"
+                  >
+                    <CardContent className="pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-4">
+                        <h4 className="font-medium font-mono group-hover:text-primary transition-colors">{client.name}</h4>
+                        <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground dark:text-gray-400">
+                          {client.achievements.map((achievement, idx) => (
+                            <li key={idx} className="group-hover:translate-x-1 transition-transform">{achievement}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="space-y-4">
+                        <div>
+                          <h5 className="font-medium mb-2 font-mono">Technologies</h5>
+                          <p className="text-sm text-primary">{client.technologies}</p>
+                        </div>
+                        <div>
+                          <h5 className="font-medium mb-2 font-mono">Impact</h5>
+                          <p className="text-sm text-muted-foreground dark:text-gray-400">{client.impact}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
-            <div className="space-y-4">
-              {["Notable Placement", "Challenges Unlimited", "Broken Galleries"].map((client) => (
-                <Card key={client} className="hover:scale-[1.02] transition-all duration-300 dark:bg-gray-800/50 dark:border-gray-700">
-                  <CardContent className="pt-6">
-                    <h4 className="font-medium mb-2 font-mono">{client}</h4>
-                    <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground dark:text-gray-400">
-                      <li>Implemented cloud migration strategies and optimized performance</li>
-                      <li>Automated routine tasks and improved system security</li>
-                      <li>Collaborated with teams to streamline IT processes</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -265,19 +323,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="text-center space-y-6">
+      {/* Contact Section with improved spacing */}
+      <section className="text-center space-y-6 mb-16">
         <h2 className="section-title dark:text-white">Get in Touch</h2>
         <div className="flex justify-center gap-4">
-          <Button className="social-link hover:scale-105 transition-all duration-300" asChild>
-            <a href="mailto:kaleem@my.swjtu.edu.cn">
-              <Mail size={20} />
-              Email Me
+          <Button 
+            className="social-link group hover:scale-105 transition-all duration-300" 
+            asChild
+          >
+            <a href="mailto:kaleem@my.swjtu.edu.cn" className="group">
+              <Mail size={20} className="group-hover:rotate-12 transition-transform" />
+              <span className="group-hover:translate-x-1 transition-transform">Email Me</span>
             </a>
           </Button>
-          <Button variant="outline" className="social-link hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800">
-            <Download size={20} />
-            Download CV
+          <Button 
+            variant="outline" 
+            className="social-link group hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800"
+          >
+            <Download size={20} className="group-hover:translate-y-1 transition-transform" />
+            <span className="group-hover:translate-x-1 transition-transform">Download CV</span>
           </Button>
         </div>
       </section>
