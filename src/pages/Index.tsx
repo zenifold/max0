@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail, Phone, ExternalLink, Download, Briefcase, GraduationCap, Newspaper } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Phone, ExternalLink, Download, Briefcase, GraduationCap, Newspaper, Code, Award, BookOpen, FileCode, Database, Book, Terminal, BadgeCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -51,7 +51,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Experience Section - Moved up */}
+        {/* Experience Section */}
         <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
           <h2 className="section-title flex items-center gap-2 dark:text-white">
             <Briefcase className="size-6" />
@@ -84,28 +84,79 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Skills Section - Moved down */}
-        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
-          <h2 className="section-title font-mono dark:text-white">Skills</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {/* Projects Section - New */}
+        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
+          <h2 className="section-title flex items-center gap-2 dark:text-white">
+            <FileCode className="size-6" />
+            Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { title: "Automation", skills: "SaltStack, Ansible, Chef, Puppet" },
-              { title: "Cloud", skills: "Salt-Cloud, Linode, GCP, AWS" },
-              { title: "Languages", skills: "Python, Bash, PHP, Perl, VB/C#.Net" },
-              { title: "OS", skills: "Debian, Ubuntu, CentOS, BSD, AIX" },
-              { title: "Policies", skills: "CIS, SOC2, PCI-DSS, GDPR, ITIL" },
-              { title: "Testing", skills: "Pytest, Docker, CircleCI, Jenkins, Inspec" }
-            ].map((category) => (
-              <div key={category.title} className="p-4 bg-muted dark:bg-gray-700/50 rounded-lg hover:scale-105 transition-all duration-300">
-                <h3 className="font-semibold mb-2 font-mono">{category.title}</h3>
-                <p className="text-sm text-muted-foreground dark:text-gray-300">{category.skills}</p>
-              </div>
+              {
+                title: "Cloud Infrastructure Automation",
+                description: "Developed automated deployment scripts for cloud infrastructure",
+                tech: "AWS, Terraform, Python",
+                icon: <Database className="size-5" />
+              },
+              {
+                title: "Security Compliance Tool",
+                description: "Built a tool to automate security compliance checks",
+                tech: "Python, Docker, Jenkins",
+                icon: <Code className="size-5" />
+              }
+            ].map((project) => (
+              <Card key={project.title} className="group hover:scale-105 transition-all duration-300 dark:bg-gray-800/50 dark:border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    {project.icon}
+                    <h3 className="font-semibold group-hover:text-primary transition-colors font-mono">{project.title}</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground dark:text-gray-400 mb-2">{project.description}</p>
+                  <p className="text-xs font-mono text-primary">{project.tech}</p>
+                  <Button variant="ghost" size="sm" className="mt-4 w-full group">
+                    View Project <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Publications Section - New */}
+        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
+          <h2 className="section-title flex items-center gap-2 dark:text-white">
+            <BookOpen className="size-6" />
+            Publications
+          </h2>
+          <div className="space-y-6">
+            {[
+              {
+                title: "Advanced Cloud Security Patterns",
+                journal: "Journal of Cloud Computing",
+                year: "2024",
+                authors: "Doe, J., Smith, A., Johnson, B."
+              },
+              {
+                title: "DevOps Practices in Enterprise Systems",
+                journal: "International Conference on Software Engineering",
+                year: "2023",
+                authors: "Doe, J., Williams, R."
+              }
+            ].map((pub) => (
+              <Card key={pub.title} className="group hover:scale-105 transition-all duration-300 dark:bg-gray-800/50 dark:border-gray-700">
+                <CardContent className="p-6">
+                  <h3 className="font-semibold group-hover:text-primary transition-colors font-mono mb-2">{pub.title}</h3>
+                  <p className="text-sm text-muted-foreground dark:text-gray-400">{pub.journal}</p>
+                  <p className="text-sm text-muted-foreground dark:text-gray-400">{pub.authors}</p>
+                  <p className="text-sm font-mono text-primary mt-2">{pub.year}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </section>
 
         {/* Education Section */}
-        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
+        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
           <h2 className="section-title flex items-center gap-2 dark:text-white">
             <GraduationCap className="size-6" />
             Education
@@ -116,13 +167,67 @@ const Index = () => {
               <p className="text-muted-foreground dark:text-gray-400">State University</p>
               <p className="text-sm text-muted-foreground dark:text-gray-400">Minors: Networking ; Network Security</p>
             </div>
-            <div>
-              <h3 className="font-semibold mb-2 font-mono">Certifications</h3>
-              <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground dark:text-gray-400">
-                <li>SaltStack Certified Engineer</li>
-                <li>GCP - Professional Cloud Architect</li>
-              </ul>
-            </div>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
+          <h2 className="section-title flex items-center gap-2 dark:text-white">
+            <Terminal className="size-6" />
+            Skills
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { title: "Automation", skills: "SaltStack, Ansible, Chef, Puppet" },
+              { title: "Cloud", skills: "Salt-Cloud, Linode, GCP, AWS" },
+              { title: "Languages", skills: "Python, Bash, PHP, Perl, VB/C#.Net" },
+              { title: "OS", skills: "Debian, Ubuntu, CentOS, BSD, AIX" },
+              { title: "Policies", skills: "CIS, SOC2, PCI-DSS, GDPR, ITIL" },
+              { title: "Testing", skills: "Pytest, Docker, CircleCI, Jenkins, Inspec" }
+            ].map((category) => (
+              <div key={category.title} 
+                   className="p-4 bg-muted dark:bg-gray-700/50 rounded-lg 
+                            transform hover:scale-105 hover:bg-accent 
+                            transition-all duration-300 cursor-pointer">
+                <h3 className="font-semibold mb-2 font-mono">{category.title}</h3>
+                <p className="text-sm text-muted-foreground dark:text-gray-300">{category.skills}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Certifications Section */}
+        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
+          <h2 className="section-title flex items-center gap-2 dark:text-white">
+            <BadgeCheck className="size-6" />
+            Certifications
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "SaltStack Certified Engineer",
+                issuer: "SaltStack",
+                date: "2023",
+                icon: <Award className="size-5" />
+              },
+              {
+                title: "GCP - Professional Cloud Architect",
+                issuer: "Google Cloud",
+                date: "2022",
+                icon: <Badge className="size-5" />
+              }
+            ].map((cert) => (
+              <Card key={cert.title} className="group hover:scale-105 transition-all duration-300 dark:bg-gray-800/50 dark:border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    {cert.icon}
+                    <h3 className="font-semibold group-hover:text-primary transition-colors font-mono">{cert.title}</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground dark:text-gray-400">{cert.issuer}</p>
+                  <p className="text-xs font-mono text-primary mt-2">{cert.date}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
 
@@ -161,7 +266,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Contact */}
+        {/* Contact Section */}
         <section className="text-center space-y-6">
           <h2 className="section-title dark:text-white">Get in Touch</h2>
           <div className="flex justify-center gap-4">
