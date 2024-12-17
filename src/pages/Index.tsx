@@ -8,28 +8,27 @@ const Index = () => {
   return (
     <>
       <AiBackground />
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 animate-fade-in dark:bg-[#1A1F2C] dark:text-white space-y-24">
-        {/* Hero Section - Improved spacing and hover effects */}
-        <section className="text-center space-y-8 pt-8">
-          <div className="inline-block px-4 py-1.5 bg-accent dark:bg-accent/10 rounded-full text-sm font-mono mb-4 animate-fade-up hover:scale-105 transition-transform cursor-default">
+      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 animate-fade-in dark:bg-[#1A1F2C] dark:text-white space-y-16">
+        {/* Hero Section */}
+        <section className="text-center space-y-4">
+          <div className="inline-block px-4 py-1 bg-accent dark:bg-accent/10 rounded-full text-sm font-mono mb-4 animate-fade-up">
             Senior DevOps Engineer
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold font-mono tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-bold font-mono">
             John Doe
           </h1>
-          <p className="text-lg text-muted-foreground dark:text-gray-300 max-w-2xl mx-auto font-mono leading-relaxed">
+          <p className="text-lg text-muted-foreground dark:text-gray-300 max-w-2xl mx-auto font-mono">
             Experienced DevOps Engineer specializing in automation, cloud infrastructure, and system optimization
           </p>
-          <div className="flex flex-wrap justify-center gap-6 pt-6">
-            {/* Social links with improved hover effects */}
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
             <Button 
               variant="outline" 
               className="social-link group hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800 hover:shadow-lg" 
               asChild
             >
               <a href="mailto:kaleem@my.swjtu.edu.cn" className="group">
-                <Mail size={20} className="group-hover:rotate-12 transition-transform duration-300" />
-                <span className="group-hover:translate-x-1 transition-transform duration-300">Email</span>
+                <Mail size={20} className="group-hover:rotate-12 transition-transform" />
+                <span className="group-hover:translate-x-1 transition-transform">Email</span>
               </a>
             </Button>
             <Button variant="outline" className="social-link group hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800 hover:shadow-lg" asChild>
@@ -59,14 +58,13 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Experience Section - Improved card layout and spacing */}
-        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-500">
-          <h2 className="section-title flex items-center gap-3 dark:text-white mb-8">
+        {/* Experience Section with Two Columns */}
+        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
+          <h2 className="section-title flex items-center gap-2 dark:text-white">
             <Briefcase className="size-6" />
             Experience
           </h2>
-          <div className="space-y-12">
-            {/* Experience entries with improved layout */}
+          <div className="space-y-8">
             {[
               {
                 role: "Senior DevOps Engineer",
@@ -104,36 +102,36 @@ const Index = () => {
                 ]
               }
             ].map((exp) => (
-              <div key={exp.role} className="space-y-6">
-                <div className="flex justify-between items-start border-l-4 border-primary pl-4 py-2">
+              <div key={exp.role} className="space-y-4">
+                <div className="flex justify-between items-start">
                   <div>
                     <h3 className="font-semibold text-lg font-mono">{exp.role}</h3>
                     <p className="text-muted-foreground dark:text-gray-400">{exp.company}</p>
                   </div>
-                  <span className="text-sm text-muted-foreground dark:text-gray-400 font-mono">{exp.period}</span>
+                  <span className="text-sm text-muted-foreground dark:text-gray-400">{exp.period}</span>
                 </div>
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {exp.clients.map((client) => (
                     <Card 
                       key={client.name} 
-                      className="hover:scale-[1.02] transition-all duration-500 dark:bg-gray-800/50 dark:border-gray-700 group"
+                      className="hover:scale-[1.02] transition-all duration-300 dark:bg-gray-800/50 dark:border-gray-700 group"
                     >
-                      <CardContent className="pt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <CardContent className="pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-4">
-                          <h4 className="font-medium font-mono group-hover:text-primary transition-colors duration-300">{client.name}</h4>
-                          <ul className="list-disc list-inside space-y-3 text-sm text-muted-foreground dark:text-gray-400">
+                          <h4 className="font-medium font-mono group-hover:text-primary transition-colors">{client.name}</h4>
+                          <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground dark:text-gray-400">
                             {client.achievements.map((achievement, idx) => (
-                              <li key={idx} className="group-hover:translate-x-1 transition-transform duration-300 hover:text-primary">{achievement}</li>
+                              <li key={idx} className="group-hover:translate-x-1 transition-transform">{achievement}</li>
                             ))}
                           </ul>
                         </div>
-                        <div className="space-y-6">
+                        <div className="space-y-4">
                           <div>
-                            <h5 className="font-medium mb-3 font-mono">Technologies</h5>
+                            <h5 className="font-medium mb-2 font-mono">Technologies</h5>
                             <p className="text-sm text-primary">{client.technologies}</p>
                           </div>
                           <div>
-                            <h5 className="font-medium mb-3 font-mono">Impact</h5>
+                            <h5 className="font-medium mb-2 font-mono">Impact</h5>
                             <p className="text-sm text-muted-foreground dark:text-gray-400">{client.impact}</p>
                           </div>
                         </div>
@@ -146,13 +144,13 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Projects Section - Improved card consistency */}
-        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-500">
-          <h2 className="section-title flex items-center gap-3 dark:text-white mb-8">
+        {/* Projects Section - New */}
+        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
+          <h2 className="section-title flex items-center gap-2 dark:text-white">
             <FileCode className="size-6" />
             Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
                 title: "Cloud Infrastructure Automation",
@@ -167,19 +165,17 @@ const Index = () => {
                 icon: <Code className="size-5" />
               }
             ].map((project) => (
-              <Card key={project.title} className="group hover:scale-105 transition-all duration-500 dark:bg-gray-800/50 dark:border-gray-700 h-full flex flex-col">
-                <CardContent className="p-6 flex flex-col h-full">
-                  <div className="flex items-center gap-3 mb-4">
+              <Card key={project.title} className="group hover:scale-105 transition-all duration-300 dark:bg-gray-800/50 dark:border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
                     {project.icon}
-                    <h3 className="font-semibold group-hover:text-primary transition-colors duration-300 font-mono">{project.title}</h3>
+                    <h3 className="font-semibold group-hover:text-primary transition-colors font-mono">{project.title}</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground dark:text-gray-400 mb-4 flex-grow">{project.description}</p>
-                  <div className="mt-auto">
-                    <p className="text-xs font-mono text-primary mb-4">{project.tech}</p>
-                    <Button variant="ghost" size="sm" className="w-full group">
-                      View Project <ArrowRight className="group-hover:translate-x-2 transition-transform duration-300" />
-                    </Button>
-                  </div>
+                  <p className="text-sm text-muted-foreground dark:text-gray-400 mb-2">{project.description}</p>
+                  <p className="text-xs font-mono text-primary">{project.tech}</p>
+                  <Button variant="ghost" size="sm" className="mt-4 w-full group">
+                    View Project <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -187,8 +183,8 @@ const Index = () => {
         </section>
 
         {/* Publications Section - New */}
-        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-500">
-          <h2 className="section-title flex items-center gap-3 dark:text-white mb-8">
+        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
+          <h2 className="section-title flex items-center gap-2 dark:text-white">
             <BookOpen className="size-6" />
             Publications
           </h2>
@@ -207,7 +203,7 @@ const Index = () => {
                 authors: "Doe, J., Williams, R."
               }
             ].map((pub) => (
-              <Card key={pub.title} className="group hover:scale-105 transition-all duration-500 dark:bg-gray-800/50 dark:border-gray-700">
+              <Card key={pub.title} className="group hover:scale-105 transition-all duration-300 dark:bg-gray-800/50 dark:border-gray-700">
                 <CardContent className="p-6">
                   <h3 className="font-semibold group-hover:text-primary transition-colors font-mono mb-2">{pub.title}</h3>
                   <p className="text-sm text-muted-foreground dark:text-gray-400">{pub.journal}</p>
@@ -220,8 +216,8 @@ const Index = () => {
         </section>
 
         {/* Education Section */}
-        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-500">
-          <h2 className="section-title flex items-center gap-3 dark:text-white mb-8">
+        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
+          <h2 className="section-title flex items-center gap-2 dark:text-white">
             <GraduationCap className="size-6" />
             Education
           </h2>
@@ -235,8 +231,8 @@ const Index = () => {
         </section>
 
         {/* Skills Section */}
-        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-500">
-          <h2 className="section-title flex items-center gap-3 dark:text-white mb-8">
+        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
+          <h2 className="section-title flex items-center gap-2 dark:text-white">
             <Terminal className="size-6" />
             Skills
           </h2>
@@ -261,8 +257,8 @@ const Index = () => {
         </section>
 
         {/* Certifications Section */}
-        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-500">
-          <h2 className="section-title flex items-center gap-3 dark:text-white mb-8">
+        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
+          <h2 className="section-title flex items-center gap-2 dark:text-white">
             <BadgeCheck className="size-6" />
             Certifications
           </h2>
@@ -281,7 +277,7 @@ const Index = () => {
                 icon: <Medal className="size-5" />
               }
             ].map((cert) => (
-              <Card key={cert.title} className="group hover:scale-105 transition-all duration-500 dark:bg-gray-800/50 dark:border-gray-700">
+              <Card key={cert.title} className="group hover:scale-105 transition-all duration-300 dark:bg-gray-800/50 dark:border-gray-700">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     {cert.icon}
@@ -296,8 +292,8 @@ const Index = () => {
         </section>
 
         {/* News Section */}
-        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-500">
-          <h2 className="section-title flex items-center gap-3 dark:text-white mb-8">
+        <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
+          <h2 className="section-title flex items-center gap-2 dark:text-white">
             <Newspaper className="size-6" />
             Latest News
           </h2>
@@ -319,7 +315,7 @@ const Index = () => {
                 description: "Completed major cloud migration project for enterprise client"
               }
             ].map((news) => (
-              <Card key={news.title} className="group hover:scale-105 transition-all duration-500 dark:bg-gray-800/50 dark:border-gray-700">
+              <Card key={news.title} className="group hover:scale-105 transition-all duration-300 dark:bg-gray-800/50 dark:border-gray-700">
                 <CardContent className="pt-6">
                   <p className="text-sm text-muted-foreground dark:text-gray-400 mb-1 font-mono">{news.date}</p>
                   <h3 className="font-medium group-hover:text-primary transition-colors font-mono">{news.title}</h3>
@@ -330,25 +326,25 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Contact Section - Improved spacing and interactions */}
-        <section className="text-center space-y-8 mb-16">
+        {/* Contact Section with improved spacing */}
+        <section className="text-center space-y-6 mb-16">
           <h2 className="section-title dark:text-white">Get in Touch</h2>
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center gap-4">
             <Button 
               className="social-link group hover:scale-105 transition-all duration-300" 
               asChild
             >
               <a href="mailto:kaleem@my.swjtu.edu.cn" className="group">
-                <Mail size={20} className="group-hover:rotate-12 transition-transform duration-300" />
-                <span className="group-hover:translate-x-1 transition-transform duration-300">Email Me</span>
+                <Mail size={20} className="group-hover:rotate-12 transition-transform" />
+                <span className="group-hover:translate-x-1 transition-transform">Email Me</span>
               </a>
             </Button>
             <Button 
               variant="outline" 
               className="social-link group hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800"
             >
-              <Download size={20} className="group-hover:translate-y-1 transition-transform duration-300" />
-              <span className="group-hover:translate-x-1 transition-transform duration-300">Download CV</span>
+              <Download size={20} className="group-hover:translate-y-1 transition-transform" />
+              <span className="group-hover:translate-x-1 transition-transform">Download CV</span>
             </Button>
           </div>
         </section>
