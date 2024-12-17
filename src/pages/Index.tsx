@@ -6,10 +6,12 @@ import AiBackground from "@/components/AiBackground";
 
 const Index = () => {
   return (
-    <>
+    <div className="relative min-h-screen w-full overflow-hidden">
       <AiBackground />
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 animate-fade-in dark:bg-[#1A1F2C] dark:text-white space-y-16">
-        {/* Hero Section */}
+      {/* Main content wrapper with max-width constraint */}
+      <div className="relative mx-auto max-w-[1000px] px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen py-12 animate-fade-in dark:bg-[#1A1F2C] dark:text-white space-y-16">
+          {/* Hero Section */}
         <section className="text-center space-y-4">
           <div className="inline-block px-4 py-1 bg-accent dark:bg-accent/10 rounded-full text-sm font-mono mb-4 animate-fade-up">
             Senior DevOps Engineer
@@ -58,7 +60,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Experience Section with Two Columns */}
+          {/* Experience Section with Two Columns */}
         <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
           <h2 className="section-title flex items-center gap-2 dark:text-white">
             <Briefcase className="size-6" />
@@ -144,7 +146,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Projects Section - New */}
+          {/* Projects Section */}
         <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
           <h2 className="section-title flex items-center gap-2 dark:text-white">
             <FileCode className="size-6" />
@@ -182,7 +184,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Publications Section - New */}
+          {/* Publications Section */}
         <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
           <h2 className="section-title flex items-center gap-2 dark:text-white">
             <BookOpen className="size-6" />
@@ -215,7 +217,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Education Section */}
+          {/* Education Section */}
         <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
           <h2 className="section-title flex items-center gap-2 dark:text-white">
             <GraduationCap className="size-6" />
@@ -230,7 +232,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Skills Section */}
+          {/* Skills Section */}
         <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
           <h2 className="section-title flex items-center gap-2 dark:text-white">
             <Terminal className="size-6" />
@@ -256,7 +258,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Certifications Section */}
+          {/* Certifications Section */}
         <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
           <h2 className="section-title flex items-center gap-2 dark:text-white">
             <BadgeCheck className="size-6" />
@@ -291,7 +293,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* News Section */}
+          {/* News Section */}
         <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
           <h2 className="section-title flex items-center gap-2 dark:text-white">
             <Newspaper className="size-6" />
@@ -326,7 +328,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Contact Section with improved spacing */}
+          {/* Contact Section */}
         <section className="text-center space-y-6 mb-16">
           <h2 className="section-title dark:text-white">Get in Touch</h2>
           <div className="flex justify-center gap-4">
@@ -348,8 +350,9 @@ const Index = () => {
             </Button>
           </div>
         </section>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
