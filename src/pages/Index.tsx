@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import AiBackground from "@/components/AiBackground";
 import { useState } from 'react';
 import ProjectDetailsDialog from '@/components/ProjectDetailsDialog';
+import PublicationsSection from '@/components/PublicationsSection';
 
 const Index = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -254,37 +255,7 @@ const Index = () => {
           />
 
           {/* Publications Section */}
-          <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
-            <h2 className="section-title flex items-center gap-2 dark:text-white">
-              <BookOpen className="size-6" />
-              Publications
-            </h2>
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Advanced Cloud Security Patterns",
-                  journal: "Journal of Cloud Computing",
-                  year: "2024",
-                  authors: "Doe, J., Smith, A., Johnson, B."
-                },
-                {
-                  title: "DevOps Practices in Enterprise Systems",
-                  journal: "International Conference on Software Engineering",
-                  year: "2023",
-                  authors: "Doe, J., Williams, R."
-                }
-              ].map((pub) => (
-                <Card key={pub.title} className="group hover:scale-105 transition-all duration-300 dark:bg-gray-800/50 dark:border-gray-700">
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold group-hover:text-primary transition-colors font-mono mb-2">{pub.title}</h3>
-                    <p className="text-sm text-muted-foreground dark:text-gray-400">{pub.journal}</p>
-                    <p className="text-sm text-muted-foreground dark:text-gray-400">{pub.authors}</p>
-                    <p className="text-sm font-mono text-primary mt-2">{pub.year}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </section>
+          <PublicationsSection />
 
           {/* Education Section */}
           <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
