@@ -1,5 +1,6 @@
-import { Briefcase, GraduationCap, Terminal, BadgeCheck, Download, Mail } from "lucide-react";
+import { Briefcase, GraduationCap, Terminal, BadgeCheck, Download, Mail, FileCode, Database, Code, Activity, ArrowRight, Award, Medal, Newspaper } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import AiBackground from "@/components/AiBackground";
 import Header from "@/components/Header";
 import ProjectDetailsDialog from '@/components/ProjectDetailsDialog';
