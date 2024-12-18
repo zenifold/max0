@@ -105,14 +105,16 @@
   }
 }
 
-.section-title {
-  @apply text-2xl font-bold mb-6;
-}
+@layer components {
+  .section-title {
+    @apply text-2xl font-bold mb-6;
+  }
 
-.card {
-  @apply p-6 rounded-lg border bg-card text-card-foreground shadow-sm;
-}
+  .card {
+    @apply p-6 rounded-lg border bg-card text-card-foreground shadow-sm;
+  }
 
-.social-link {
-  @apply flex items-center gap-2;
+  .social-link {
+    @apply flex items-center gap-2;
+  }
 }
