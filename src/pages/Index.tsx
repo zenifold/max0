@@ -63,6 +63,7 @@ const Index = () => {
             </div>
           </section>
 
+          {/* Experience Section */}
           {/* Experience Section with Two Columns */}
           <section className="card dark:bg-gray-800/50 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
             <h2 className="section-title flex items-center gap-2 dark:text-white">
