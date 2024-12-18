@@ -25,6 +25,7 @@ const AdminPanel = () => {
           <TabsTrigger value="projects">Projects</TabsTrigger>
           <TabsTrigger value="publications">Publications</TabsTrigger>
           <TabsTrigger value="skills">Skills</TabsTrigger>
+          <TabsTrigger value="certifications">Certifications</TabsTrigger>
         </TabsList>
 
         <TabsContent value="projects" className="space-y-4">
@@ -57,6 +58,17 @@ const AdminPanel = () => {
             <Input placeholder="Skill Category" />
             <Input placeholder="Skills (comma-separated)" />
             <Button onClick={() => handleSave("Skills")}>Save Skills</Button>
+          </div>
+        </TabsContent>
+
+        <TabsContent value="certifications" className="space-y-4">
+          <h3 className="text-xl font-semibold">Edit Certification</h3>
+          <div className="space-y-4">
+            <Input placeholder="Certification Title" />
+            <Input placeholder="Issuing Organization" />
+            <Input placeholder="Issue Date" />
+            <Input placeholder="Verification URL" />
+            <Button onClick={() => handleSave("Certification")}>Save Certification</Button>
           </div>
         </TabsContent>
       </Tabs>
