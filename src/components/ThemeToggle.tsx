@@ -5,7 +5,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Monitor, Moon, Sun, Terminal } from "lucide-react";
+import { Moon, Sun, Terminal } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 
 export function ThemeToggle() {
@@ -33,10 +33,6 @@ export function ThemeToggle() {
         <DropdownMenuItem onClick={() => setTheme("ide")}>
           <Terminal className="mr-2 h-4 w-4" />
           <span>IDE</span>
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          <Monitor className="mr-2 h-4 w-4" />
-          <span>System</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
