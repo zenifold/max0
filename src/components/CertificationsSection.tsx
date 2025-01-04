@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Award, ExternalLink } from "lucide-react";
+import { Award } from "lucide-react";
 
 const certifications = [
   {
@@ -50,14 +49,6 @@ const CertificationsSection = () => {
               </div>
               <p className="text-sm text-muted-foreground dark:text-gray-400">{cert.issuer}</p>
               <p className="text-xs font-mono text-primary mt-2">{cert.date}</p>
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="mt-4 w-full group"
-                onClick={() => window.open(cert.verificationUrl, '_blank')}
-              >
-                Verify Certificate <ExternalLink className="ml-2 size-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
             </CardContent>
           </Card>
         ))}
