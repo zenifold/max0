@@ -1,69 +1,73 @@
-# Welcome to your Lovable project
+# Maximilian Murphy - Professional Resume
 
-## Project info
+![Resume Preview](public/og-image.png)
 
-**URL**: https://lovable.dev/projects/54e91c9a-a56c-4658-bb51-437f5582bc0b
+## 🚀 Overview
 
-## How can I edit this code?
+Welcome to my professional resume website! This is a modern, responsive web application built with cutting-edge technologies to showcase my experience as a Director of Product Management. Feel free to use this as a template for your own resume website.
 
-There are several ways of editing your application.
+## 🛠 Tech Stack
 
-**Use Lovable**
+This project leverages modern web technologies:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/54e91c9a-a56c-4658-bb51-437f5582bc0b) and start prompting.
+- **React** - For building a dynamic and responsive user interface
+- **TypeScript** - For type-safe code and better developer experience
+- **Tailwind CSS** - For beautiful, utility-first styling
+- **shadcn/ui** - For elegant and accessible UI components
+- **Vite** - For lightning-fast development and building
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🌟 Features
 
-**Use your preferred IDE**
+- 🌓 Dark/Light mode support
+- 📱 Fully responsive design
+- ⚡ Lightning-fast performance
+- 🎨 Modern and clean UI
+- 🔍 SEO optimized
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚦 Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+```bash
+git clone https://github.com/zenifold/resume-website.git
+```
 
-Follow these steps:
+2. Install dependencies:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 🔧 Customization
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Want to use this template for your own resume? Here's how:
 
-**Use GitHub Codespaces**
+1. Fork this repository
+2. Update the content in the components to reflect your experience
+3. Customize the styling to match your personal brand
+4. Deploy using your preferred hosting service
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📄 License
 
-## What technologies are used for this project?
+This project is open source and available under the MIT License. Feel free to use it as a template for your own resume website!
 
-This project is built with .
+## 🤝 Contributing
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Contributions are welcome! Feel free to submit a pull request or open an issue if you find any bugs or have suggestions for improvements.
 
-## How can I deploy this project?
+## 🔗 Connect with Me
 
-Simply open [Lovable](https://lovable.dev/projects/54e91c9a-a56c-4658-bb51-437f5582bc0b) and click on Share -> Publish.
+- [LinkedIn](https://linkedin.com/in/maximilian-murphy)
+- [GitHub](https://github.com/zenifold)
+- [Email](mailto:maxkmurphy@gmail.com)
 
-## I want to use a custom domain - is that possible?
+## 💫 Live Demo
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Visit the live site: [Maximilian Murphy's Resume](https://lovable.dev/projects/54e91c9a-a56c-4658-bb51-437f5582bc0b)
+
+---
+
+Built with ❤️ using React and modern web technologies. Hosted on Lovable.
