@@ -1,7 +1,5 @@
 # Maximilian Murphy - Professional Resume
 
-![Resume Preview](public/og-image.png)
-
 ## 🚀 Overview
 
 Welcome to my professional resume website! This is a modern, responsive web application built with cutting-edge technologies to showcase my experience as a Director of Product Management. Feel free to use this as a template for your own resume website.
@@ -28,7 +26,7 @@ This project leverages modern web technologies:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/zenifold/resume-website.git
+git clone https://github.com/zenifold/max0.git
 ```
 
 2. Install dependencies:
@@ -62,12 +60,11 @@ Contributions are welcome! Feel free to submit a pull request or open an issue i
 
 - [LinkedIn](https://linkedin.com/in/maximilian-murphy)
 - [GitHub](https://github.com/zenifold)
-- [Email](mailto:maxkmurphy@gmail.com)
 
 ## 💫 Live Demo
 
-Visit the live site: [Maximilian Murphy's Resume](https://lovable.dev/projects/54e91c9a-a56c-4658-bb51-437f5582bc0b)
+Visit the live site: [Maximilian Murphy's Resume](https://max0.lovable.app)
 
 ---
 
-Built with ❤️ using React and modern web technologies. Hosted on Lovable.
+Built with ❤️ using React and modern web technologies.
