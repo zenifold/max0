@@ -30,13 +30,13 @@ const HeaderSection = () => (
         </a>
       </Button>
       <Button variant="outline" className="social-link group hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800 hover:shadow-lg" asChild>
-        <a href="https://github.com/maxkmurphy" target="_blank" rel="noopener noreferrer" className="group">
+        <a href="https://github.com/zenifold" target="_blank" rel="noopener noreferrer" className="group">
           <Github size={20} className="group-hover:rotate-12 transition-transform" />
           <span className="group-hover:translate-x-1 transition-transform">GitHub</span>
         </a>
       </Button>
       <Button variant="outline" className="social-link group hover:scale-105 transition-all duration-300 dark:border-gray-700 dark:hover:bg-gray-800 hover:shadow-lg" asChild>
-        <a href="https://linkedin.com/in/maxkmurphy" target="_blank" rel="noopener noreferrer" className="group">
+        <a href="https://linkedin.com/in/maximilian-murphy" target="_blank" rel="noopener noreferrer" className="group">
           <Linkedin size={20} className="group-hover:rotate-12 transition-transform" />
           <span className="group-hover:translate-x-1 transition-transform">LinkedIn</span>
         </a>
