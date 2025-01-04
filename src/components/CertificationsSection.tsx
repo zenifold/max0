@@ -1,36 +1,35 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Award, Medal, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { Award, ExternalLink } from "lucide-react";
 
 const certifications = [
   {
-    title: "SaltStack Certified Engineer",
-    issuer: "SaltStack",
+    title: "Professional Scrum Product Owner (PSPO I)",
+    issuer: "Scrum.org",
     date: "2023",
-    verificationUrl: "https://verify.example.com/salt-123",
+    verificationUrl: "https://www.scrum.org/certificates/verify",
     icon: <Award className="size-5" />
   },
   {
-    title: "GCP - Professional Cloud Architect",
-    issuer: "Google Cloud",
-    date: "2022",
-    verificationUrl: "https://verify.example.com/gcp-456",
-    icon: <Medal className="size-5" />
-  },
-  {
-    title: "AWS Solutions Architect",
+    title: "AWS Cloud Practitioner",
     issuer: "Amazon Web Services",
-    date: "2023",
-    verificationUrl: "https://verify.example.com/aws-789",
+    date: "2021",
+    verificationUrl: "https://aws.amazon.com/verification",
     icon: <Award className="size-5" />
   },
   {
-    title: "Azure Cloud Administrator",
-    issuer: "Microsoft",
-    date: "2024",
-    verificationUrl: "https://verify.example.com/azure-012",
-    icon: <Medal className="size-5" />
+    title: "Certified Data Professional (CDP)",
+    issuer: "ICCP",
+    date: "2021",
+    verificationUrl: "https://iccp.org/verify",
+    icon: <Award className="size-5" />
+  },
+  {
+    title: "Certified Associate in Project Management",
+    issuer: "PMI",
+    date: "2021",
+    verificationUrl: "https://www.pmi.org/certifications/verify",
+    icon: <Award className="size-5" />
   }
 ];
 
